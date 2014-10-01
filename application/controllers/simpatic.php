@@ -12,10 +12,8 @@ class Simpatic extends CI_Controller {
 	         $data= array();		 
 	         
 	         $data['parametre1'] = $name;
-	         $data['parametre2'] = $name;
-	         $data['parametre3'] = $name;
 	         
-	         $this->load->view('saluda',$data);
+	         $this->load->view('grettings',$data);
 	}
 	
 }
