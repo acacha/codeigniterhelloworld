@@ -2,6 +2,12 @@
 
 class Simpatic extends CI_Controller {
 
+	function __construct() {
+
+		parent::__construct();
+		$this->config->load('codeigniterhelloworld');
+	}
+
 
 	public function index()
 	{
@@ -10,8 +16,9 @@ class Simpatic extends CI_Controller {
 	
 	public function grettings($name) {
 	         $data= array();		 
-	         
+
 	         $data['parametre1'] = $name;
+	         $data['parametre2'] = $this->config->item('academic_period');
 	         
 	         $this->load->view('grettings',$data);
 	}
