@@ -67,7 +67,7 @@
 <body>
 
 <div id="container">
-	<h1>Hola mon!</h1>
+	<h1>Hola <?php echo $parametre1;?> !</h1>
 </div>
 
 </body>
