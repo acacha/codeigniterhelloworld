@@ -13,9 +13,23 @@ class Simpatic extends CI_Controller {
 	{
 		$this->grettings('mon');
 	}
+
+	public function grettings_2() {
+	         $data= array();		 
+
+
+	         $nom = $this->input->get_post('nom');
+
+	         $data['nom'] = $nom;
+
+	         $this->load->view('grettings',$data);
+	}
 	
 	public function grettings($name) {
 	         $data= array();		 
+
+
+	         $parametre_1 = $this->input->get('parametre1');
 
 	         $data['parametre1'] = $name;
 	         $data['parametre2'] = $this->config->item('academic_period');
