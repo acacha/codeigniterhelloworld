@@ -17,9 +17,21 @@ class Simpatic extends CI_Controller {
 	}
 
 	public function form_example() {
-	         $data= array();		 
 
-	         $this->load->view('form_example',$data);
+		$data= array();	
+
+		$data['firstname'] = "";	 
+		$data['lastname'] = "";
+     		
+		if ( isset($_POST) )		{
+		 	$data['firstname'] = $this->input->post("firstname") ;
+		 	$data['lastname'] = $this->input->post("lastname") ;
+		} 
+
+		$this->load->view('form_example',$data);
+     		
+     	
+
 	}
 
 	public function grettings_2() {
