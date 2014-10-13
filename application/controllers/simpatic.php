@@ -6,6 +6,8 @@ class Simpatic extends CI_Controller {
 
 		parent::__construct();
 		$this->config->load('codeigniterhelloworld');
+
+		$this->load->helper('url');
 	}
 
 
@@ -14,9 +16,20 @@ class Simpatic extends CI_Controller {
 		$this->grettings('mon');
 	}
 
+	public function form_example() {
+	         $data= array();		 
+
+	         $this->load->view('form_example',$data);
+	}
+
 	public function grettings_2() {
 	         $data= array();		 
 
+	         //echo $_GET;
+	         
+	         //var_export($_GET);
+	         //print_r($_GET);
+	         var_dump($_GET);
 
 	         $nom = $this->input->get_post('nom');
 
